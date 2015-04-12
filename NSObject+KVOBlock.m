@@ -170,7 +170,7 @@ static CKVOBlockHelper *KVOBlockHelperForObject(NSObject *object, BOOL inCreate)
 	[_tokensByContext enumerateKeysAndObjectsUsingBlock:^(NSNumber *index, CKVOToken *token, BOOL *stop) {
 		printf("\t\t%s\n", [[index description] UTF8String]);
 		}];
-	printf("\tObservationInfo: %s\n", [[(__bridge id)[strong_observedObject observationInfo] description] UTF8String]);
+	printf("\tObservationInfo: %s\n", [[[self.observedObject observationInfo] description] UTF8String]);
 	}
 
 - (void)removeHandlerForKey:(CKVOToken *)inToken
